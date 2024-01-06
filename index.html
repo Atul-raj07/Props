@@ -9,10 +9,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-[manrope]" >
-    <div class="preloader h-screen w-full flex items-center  justify-center bg-green-400">
-        <h1 class="head font-normal text-[220px] text-red-500 ">0%</h1>
+    <div class="preloader absolute h-screen w-full flex items-end justify-center bg-primary" >
+        <h1 class="head font-normal text-[220px] text-secondary">0%</h1>
+    </div>
+    
+    <div class="page1  h-screen w-full flex items-end justify-center bg-secondary" >
+        <!-- <h1 class="head font-normal text-[220px] text-secondary">0%</h1> -->
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
+<!-- npx tailwindcss -i ./src/input.css -o ./style.css --watch   -->
