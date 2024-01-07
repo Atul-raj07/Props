@@ -7,14 +7,26 @@
     <title>Home - Props</title>
     <link rel="shortcut icon" href="https://props.studiolumio.com/icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 <body class="font-[manrope]" >
-    <div class="preloader absolute h-screen w-full flex items-end justify-center bg-primary" >
+    <!-- <div class="preloader absolute h-screen w-full flex items-center justify-center flex-col bg-primary" >
+        <img class="opacity-0 max-w-72 object-cover" src="https://props.studiolumio.com/preloader.jpeg" alt="">
         <h1 class="head font-normal text-[220px] text-secondary">0%</h1>
-    </div>
+    </div> -->
     
-    <div class="page1  h-screen w-full flex items-end justify-center bg-secondary" >
-        <!-- <h1 class="head font-normal text-[220px] text-secondary">0%</h1> -->
+    <div class="page1  h-screen w-full bg-secondary" >
+        <nav class="h-14 px-8 bg-primary max-w-full flex items-center justify-between">
+            <h2 class="text-lg font-medium tracking-wider text-secondary">PROPS</h2>
+            <span><i class="ri-menu-fill text-secondary text-xl font-light"> Menu</i></span>
+            <div class="flex items-center gap-5">
+                <h4 class="text-secondary text-lg uppercase">Shop</h4>
+                <h5 class="text-secondary text-lg uppercase"><i class="ri-shopping-cart-2-line"> </i>Cart(0)</h5>
+            </div>
+        </nav>  
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
