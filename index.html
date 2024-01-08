@@ -2,36 +2,60 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Props</title>
-    <link rel="shortcut icon" href="https://props.studiolumio.com/icon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    <link rel="shortcut icon" href="https://props.studiolumio.com/icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
-<body class="font-[manrope]" >
-    <!-- <div class="preloader absolute h-screen w-full flex items-center justify-center flex-col bg-primary" >
-        <img class="opacity-0 max-w-72 object-cover" src="https://props.studiolumio.com/preloader.jpeg" alt="">
+
+<body class="font-[manrope]">
+    <!-- <div class="preloader z-[100] fixed h-screen w-full flex items-center justify-center flex-col bg-primary">
+        <img class="opacity-0 max-w-72 object-cover" src="https://props.studiolumio.com/preloader.jpeg" alt="" />
         <h1 class="head font-normal text-[220px] text-secondary">0%</h1>
     </div> -->
-    
-    <div class="page1  h-screen w-full bg-secondary" >
-        <nav class="h-14 px-8 bg-primary max-w-full flex items-center justify-between">
+    <div class="page1 h-[170vh] w-full overflow-hidden bg-secondary">
+        <nav class="h-14 px-8 z-40 fixed w-full bg-primary max-w-full flex items-center justify-between">
             <h2 class="text-lg font-medium tracking-wider text-secondary">PROPS</h2>
-            <span><i class="ri-menu-fill text-secondary text-xl font-light"> Menu</i></span>
-            <div class="flex items-center gap-5">
+            <span><i class="ri-menu-fill text-secondary text-xl font-light">
+                    Menu</i></span>
+            <div class="flex  items-center gap-7">
                 <h4 class="text-secondary text-lg uppercase">Shop</h4>
-                <h5 class="text-secondary text-lg uppercase"><i class="ri-shopping-cart-2-line"> </i>Cart(0)</h5>
+                <h5 class="text-secondary text-lg uppercase">
+                    <i class="ri-shopping-cart-2-line"> </i>Cart(0)
+                </h5>
             </div>
-        </nav>  
+        </nav>
+        <div class="h-[170vh] w-full bg-primary  ">
+            <video class="h-full w-[200%]  object-center  object-cover z-0 " autoplay muted loop
+            src="https://videos.ctfassets.net/tuohjudwxvzs/6ExUYMCjKNlTpOcR7RID6B/449175205379f45191d556fcf7ee9ab6/home_dmgpke.avif"></video>
+        </div>
     </div>
+    <div class="overlay h-[170vh] w-full absolute top-0 bg-secondary/10 ">
+        <h1 class="text-primary text-[460px] font-normal uppercase text-start leading-tight "> props</h1>
+        <div class="w-2/5  pl-32  ">
+            <p class="text-lg  text-primary uppercase w-[60%]">ADD ELEGANCE AND CHARM TO YOUR  SPACE WITH FURNITURE THAT EXPRESSES YOUR INDIVIDUALITY</p>
+            <button class="  text-primary uppercase px-5 py-2 border-2 border-solid rounded-full mt-4 font-semibold text-lg flex items-center justify-between gap-2 ">explore collection <div class="h-6 w-6 flex items-center justify-center mr-2 bg-primary rounded-full text-secondary "><i class="ri-arrow-right-line"></i></div></button>
+        </div>
+        <div class="productofday flex flex-col items-center">
+            <p class="text-7xl text-end text-primary w-3/6">WHERE STYLE
+            ENDURES: TIMELESS
+            FURNITURE FOR <br>
+            YOUR STORY</p>
+            <img class="w-96 mt-5 bg-primary " src="https://props.studiolumio.com/props/pngwing_fttlre.png" alt="">
+            <h4 class="text-7xl text-end mt-24 text-primary uppercase">product of the day</h4>
+        </div>
+    </div>
+    <div class="h-screen w-full bg-secondary"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+  integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
 
 <!-- npx tailwindcss -i ./src/input.css -o ./style.css --watch   -->
