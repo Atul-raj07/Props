@@ -47,22 +47,62 @@ gsap.to(".productofday",{
     scrollTrigger:{
         trigger:".productofday",
         scroller:"body",
-        markers:true,
-        start : "top 90%",
+        // markers:true,
+        start : "top 80%",
         end:"top -50%",
         scrub:1,
         // pin:true,
     }
 })
+gsap.to(".page2 img",{
+    y : -100,
+    scrollTrigger:{
+        trigger:".page2",
+        scroller:"body",
+        markers:true,
+        start : "top 40%",
+        end:"top -60%",
+        scrub:2,
+        // pin:true,
+    }
+})
+// gsap.from(".productofday p",{
+//     y : 100,
+//     opacity :0,
+//     scrollTrigger:{
+//         trigger:".productofday",
+//         scroller:"body",
+//         markers:true,
+//         start : "top 80%",
+//         end:"top 0%",
+//         scrub:1,
+//         pin:true,
+//     }
+// })
+
 gsap.to(".overlay",{
-    y : -600,
+    y : -100,
     scrollTrigger:{
         trigger:".page1",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start : "top 0%",
         end:"top 0%",
         scrub:1,
         // pin:true,
     }
 })
+// Get the total width of all .product elements
+const productElements = document.querySelectorAll(".product");
+const totalWidth = Array.from(productElements).reduce(
+    (acc, element) => acc + element.offsetWidth,
+    0
+);
+
+// Set the GSAP animation with a duration based on the total width
+gsap.to(".product", {
+    x: `-${totalWidth}px`,
+    duration: totalWidth / 100, // Adjust the factor as needed
+    ease: "linear",
+    repeat: -1,
+});
