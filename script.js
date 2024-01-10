@@ -59,7 +59,7 @@ gsap.to(".page2 img",{
     scrollTrigger:{
         trigger:".page2",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start : "top 40%",
         end:"top -60%",
         scrub:2,
@@ -102,7 +102,16 @@ const totalWidth = Array.from(productElements).reduce(
 // Set the GSAP animation with a duration based on the total width
 gsap.to(".product", {
     x: `-${totalWidth}px`,
-    duration: totalWidth / 100, // Adjust the factor as needed
+    duration: totalWidth / 1000, // Adjust the factor as needed
+    // duration : 2,
     ease: "linear",
-    repeat: -1,
+    // repeat: ,
+    scrollTrigger:{
+        trigger:".page3",
+        scroller:"body",
+        markers:true,
+        start : "top 60%",
+        end:"top 0%",
+        scrub:1,
+    }
 });
