@@ -102,16 +102,19 @@ const totalWidth = Array.from(productElements).reduce(
 // Set the GSAP animation with a duration based on the total width
 gsap.to(".product", {
     x: `-${totalWidth}px`,
-    duration: totalWidth / 1000, // Adjust the factor as needed
-    // duration : 2,
+    duration: totalWidth / 200, // Adjust the factor as needed
     ease: "linear",
-    // repeat: ,
+    repeat: -1,
+    
+});
+gsap.to(".product",{
+    x: `-${totalWidth}px`,
     scrollTrigger:{
         trigger:".page3",
         scroller:"body",
         markers:true,
         start : "top 60%",
-        end:"top 0%",
-        scrub:1,
+        end:"top -100%",
+        scrub:4,
     }
-});
+})
