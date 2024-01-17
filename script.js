@@ -118,29 +118,37 @@ gsap.to(".product",{
         scrub:2,
     }
 })
-gsap.to(".prdctcatg", {
-    x: `-${totalWidth}px`,
+// gsap.to(".prdctcatg", {
+    // x: `-${totalWidth}px`,
     // duration: totalWidth / 200, // Adjust the factor as needed
     // ease: "linear",
     // repeat: -1,
     
-});
+// });
 
 gsap.to(".prdctcatg",{
-    // x: `-${totalWidth - 10000}px`,
+    // x: `-${totalWidth}px`,
     transform : "translateX(-370%)",
     scrollTrigger:{
         trigger:".page4",
         scroller:"body",
         markers:true,
         start : "top 0%",
-        end:"top -50%",
+        // end:"top -50%",
         scrub:1,
         pin:true,
     }
 })
-// gsap.to(".page4",{
-//     y: "-100%",
-//     duration:2,
-//     delay:.5,
-// })
+gsap.to(".page5 img",{
+
+    scale : 1.5,
+    scrollTrigger:{
+        trigger:".page5",
+        scroller:"body",
+        markers : true,
+        start:"top 50%",
+        end: "top -50%",
+        // pin : true,
+        scrub :1,
+    }
+})
