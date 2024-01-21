@@ -75,6 +75,22 @@ gsap.to(".productofday",{
         // pin:true,
     }
 })
+gsap.to(".page1 video",{
+    y:"-200",
+    scale:1.5,
+    // delay:2,
+    duration:1,
+})
+gsap.to(".page1 video",{
+    scale:1,
+    scrollTrigger:{
+        trigger:".page1",
+        scroller:"body",
+        scrub:2,
+        markers:true,
+
+    }
+})
 gsap.to(".page2 img",{
     y : -100,
     scrollTrigger:{
@@ -195,7 +211,7 @@ gsap.to(".page7 .leftimg img",{
     scrollTrigger:{
         scroller:"body",
         trigger:".leftimg",
-        markers:true,
+        // markers:true,
         scrub:2,
         start:"top 90%"
     }
@@ -206,10 +222,34 @@ gsap.to(".page7 .leftimg",{
     scrollTrigger:{
         scroller:"body",
         trigger:".leftimg",
-        markers:true,
+        // markers:true,
         scrub:2,
         start:"top 50%",
         // end:"top -50%",
+    }
+})
+gsap.to(".page7 .newsletter",{
+    // scale:1,
+    y:"-120%",
+    scrollTrigger:{
+        scroller:"body",
+        trigger:".leftimg",
+        // markers:true,
+        scrub:2,
+        start:"top -30%",
+        // end:"top -50%",
+    }
+})
+gsap.to(".page7 .subscribe",{
+    // scale:1,
+    y:"-180%",
+    scrollTrigger:{
+        scroller:"body",
+        trigger:".subscribe",
+        // markers:true,
+        scrub:2,
+        start:"top 50%",
+        // end:"top -20%",
     }
 })
 gsap.to(".page7 .right",{
@@ -218,9 +258,21 @@ gsap.to(".page7 .right",{
     scrollTrigger:{
         scroller:"body",
         trigger:".page7",
-        markers:true,
+        // markers:true,
         pin:true,
         scrub:2,
         start:"top 0%"
+    }
+})
+gsap.to(".page8 .footer img",{
+    scale:.8,
+    // y:"-100%",
+    // ease: "power1.inOut",
+    scrollTrigger:{
+        scroller:"body",
+        trigger:".page8",
+        // markers:true,
+        scrub:2,
+        start:"top 50%"
     }
 })
