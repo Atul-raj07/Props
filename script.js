@@ -1,31 +1,3 @@
-// gsap.registerPlugin(ScrollTrigger);
-
-// // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-
-// const locoScroll = new LocomotiveScroll({
-//   el: document.querySelector(".main"),
-//   smooth: true
-// });
-// // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-// locoScroll.on("scroll", ScrollTrigger.update);
-
-// // tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
-// ScrollTrigger.scrollerProxy(".main", {
-//   scrollTop(value) {
-//     return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-//   }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-//   getBoundingClientRect() {
-//     return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-//   },
-//   // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-//   pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
-// });
-
-// // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-// // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-// ScrollTrigger.refresh();
 
 var h1 = document.querySelector(".preloader h1");
 var pageloader = document.querySelector(".preloader")
@@ -33,9 +5,6 @@ var tl = gsap.timeline()
 var image = document.querySelector("img")
 
 let i = 0;
-// while(i < 100){
-//     i++
-// }
 const intervalId = setInterval(() => {
     if(i < 100){
         i++
@@ -68,27 +37,18 @@ gsap.to(".productofday",{
     scrollTrigger:{
         trigger:".productofday",
         scroller:"body",
-        // markers:true,
         start : "top 80%",
         end:"top -50%",
         scrub:1,
-        // pin:true,
     }
 })
 gsap.to(".page1 video",{
-    y:"-200",
-    scale:1.5,
-    // delay:2,
-    duration:1,
-})
-gsap.to(".page1 video",{
-    scale:1,
+    transform : "scale(1)",
     scrollTrigger:{
         trigger:".page1",
         scroller:"body",
         scrub:2,
-        markers:true,
-
+        start:("top 10%")
     }
 })
 gsap.to(".page2 img",{
@@ -96,7 +56,6 @@ gsap.to(".page2 img",{
     scrollTrigger:{
         trigger:".page2",
         scroller:"body",
-        // markers:true,
         start : "top 40%",
         end:"top -60%",
         scrub:2,
@@ -104,19 +63,6 @@ gsap.to(".page2 img",{
     }
 })
 
-// gsap.to(".overlay",{
-//     y : "-100%",
-//     scrollTrigger:{
-//         trigger:".page1",
-//         scroller:"body",
-//         // markers:true,
-//         start : "top 0%",
-//         end:"top 0%",
-//         scrub:1,
-//         // pin:true,
-//     }
-// })
-// Get the total width of all .product elements
 const productElements = document.querySelectorAll(".product");
 const totalWidth = Array.from(productElements).reduce(
     (acc, element) => acc + element.offsetWidth,
@@ -124,14 +70,14 @@ const totalWidth = Array.from(productElements).reduce(
 );
 
 // Set the GSAP animation with a duration based on the total width
-gsap.to(".product", {
-    x: `-${totalWidth}px`,
-    duration: totalWidth / 200, // Adjust the factor as needed
+gsap.to(".products", {
+    transform : "translateX(-100%)",
+    duration: 30, // Adjust the factor as needed
     ease: "linear",
     repeat: -1,
 });
-gsap.to(".product",{
-    x: `-${totalWidth}px`,
+gsap.to(".parentproducts",{
+    transform : "translateX(-100%)",
     scrollTrigger:{
         trigger:".page3",
         scroller:"body",
@@ -141,14 +87,6 @@ gsap.to(".product",{
         scrub:2,
     }
 })
-// gsap.to(".prdctcatg", {
-//     x: `-${totalWidth}px`,
-//     duration: totalWidth / 200, // Adjust the factor as needed
-//     ease: "linear",
-//     repeat: -1,
-    
-// });
-
 gsap.to(".prdctcatg",{
     // x: `-${totalWidth}px`,
     transform : "translateX(-370%)",
@@ -175,31 +113,18 @@ gsap.to(".page5 img",{
         scrub :1,
     }
 })
-// gsap.to(".page5",{
-//     y : -100,
-//     scrollTrigger:{
-//         trigger:".page5",
-//         scroller:".main",
-//         markers : true,
-//         start:"top 50%",
-//         end: "top -50%",
-//         // pin : true,
-//         scrub :1,
-//     }
-// })
-gsap.to(".arrival", {
-    x: `-${totalWidth}px`,
-    duration: totalWidth / 200, // Adjust the factor as needed
+gsap.to(".page6 .latestarrival", {
+    transform :"translateX(-100%)",
+    duration:25, // Adjust the factor as needed
     ease: "linear",
     repeat: -1,
     
 });
-gsap.to(".page6 .arrival",{
-    x: `-${totalWidth}px`,
+gsap.to(".page6 .parentproducts",{
+    transform :"translateX(-100%)", 
     scrollTrigger:{
         trigger:".page6",
         scroller:"body",
-        // markers:true,
         start : "top 60%",
         end:"top -100%",
         scrub:2,
@@ -271,7 +196,6 @@ gsap.to(".page8 .footer img",{
     scrollTrigger:{
         scroller:"body",
         trigger:".page8",
-        // markers:true,
         scrub:2,
         start:"top 50%"
     }
